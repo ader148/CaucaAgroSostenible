@@ -28,7 +28,7 @@
 <body>
     @include('header')
 
-    <h2>hola</h2>
+    <h2>hola alvaro</h2>
 </body>
 
 @include('footer')
