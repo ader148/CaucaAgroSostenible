@@ -18,7 +18,7 @@
         </ul>
    
       </div>
-      <hr width=100%  text-align="center"  size=10 color="#fff">
+      <hr width=100%  text-align="center"  size=10 color="#7A7A7A">
 
     <div class="flex-item flex-links">
       <p><a href="#">Canasta Agricola</a> | <a href="#">Emprendimientos y Asociaciones</a> |<a href="#"> Agro Oferta</a> | <a href="#">Inversionistas</a> | <a href="#">Eventos</a></p>
