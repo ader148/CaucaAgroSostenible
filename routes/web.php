@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,10 @@ Auth::routes(['register'=>false,'reset' => false]);
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::group(['middleware' => ['role:Admin']], function () {
+        Route::get('/admin/home', [AdminController::class, 'index']);
+    });
 
    //Route::get('/vistaGeneral', [PanelesController::class, 'show']);
 
