@@ -31,9 +31,12 @@ body {
   font-family: "Gotham SSm A","Gotham SSm B","UCF Sans Serif Alt","Helvetica Neue",Arial,sans-serif;
 }
 .img-logo{
-  width: 360px; height: 180px;
+  width: 360px; 
+  height: 180px;
+  display: block;
   margin-left: auto; 
   margin-right: auto;
+
 }
 
 .flex-footer a {
@@ -59,14 +62,14 @@ body {
   --gmail: #bd081c;
 }
 
-.redes-container{
+.container-fluid-redes{
   display: flex;
   height: 22vh;
   align-items: center;
   justify-content: center;
 }
 
-.redes-container ul li{
+.container-fluid-redes ul li{
   display: inline-block;
   margin: 0 25px;
   width: 60px;
@@ -74,7 +77,7 @@ body {
   text-align: center;
 }
 
-.redes-container ul li a{
+.container-fluid-redes ul li a{
   display: block;
   padding: 0 15px;
   background: 3E3E3E;
@@ -85,30 +88,30 @@ body {
   transition: .2s;
 }
 
-.redes-container ul:hover a{
+.container-fluid-redes ul:hover a{
   filter: blur(2px);
 }
 
-.redes-container ul li a:hover{
+.container-fluid-redes ul li a:hover{
   transform: translateY(-3px) scale(1.05);
   box-shadow:  0 5px 5px 0px rgba(0, 0, 0, .4);
   filter: none;
 }
 
-.redes-container ul li .facebook:hover{
+.container-fluid-redes ul li .facebook:hover{
   background: var(--facebook);
 }
 
-.redes-container ul li .twitter:hover{
+.container-fluid-redes ul li .twitter:hover{
   background: var(--twitter);
 }
-.redes-container ul li .instagram:hover{
+.container-fluid-redes ul li .instagram:hover{
   background: var(--instagram);
 }
-.redes-container ul li .whatsapp:hover{
+.container-fluid-redes ul li .whatsapp:hover{
   background: var(--whatsapp);
 }
-.redes-container ul li .gmail:hover{
+.container-fluid-redes ul li .gmail:hover{
   background: var(--gmail);
 }
 

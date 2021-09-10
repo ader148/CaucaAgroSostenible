@@ -1,33 +1,41 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark gradient-custom" >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">#CaucAgroSostenible</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">
+      <img src="./img/logo.png" 
+        alt="" 
+        width="30" 
+        height="24" 
+        class="d-inline-block align-text-top">
+        #CaucaAgroSostenible
+    </a>
+
+      <button class="navbar-toggler" 
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Canasta Agricola</a>
+            <a class="nav-link" aria-current="page" href="#">CANASTA AGRICOLA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Emplendimientos y Asociaciones</a>
+            <a class="nav-link" href="#">EMPRENDIMIENTOS Y ASOCIACIONES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Agro Oferta</a>
+            <a class="nav-link" href="#">AGRO OFERTA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Inversionistas</a>
+            <a class="nav-link" href="#">INVERSIONISTAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Eventos</a>
+            <a class="nav-link" href="#">EVENTOS</a>
           </li>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          
           <li>
               <!-- Right Side Of Navbar -->
               <ul class="navbar-nav ml-auto">
@@ -62,10 +70,8 @@
                                       </form>
                                   </div>
                               </li>
-
                           @endguest
-                      </ul>
-
+                    </ul>
           </li>
         </ul>
       </div>

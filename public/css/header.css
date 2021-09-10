@@ -1,33 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.container-fluid{
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to right, #8DBD4E, #48781E);
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  margin-right: 100px;
-  margin-left:  auto;
-}
-
-.container-fluid .navbar-brand{
-  float: left;
-  line-height: 75px;
-  color: #fff;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: #fff;
-  float: right;
-  line-height: 75px;
-  padding: 10px 25px;
+  .gradient-custom {
+  background: rgb(110,158,57);
+  background: linear-gradient(90deg, rgba(155,203,89,1) 9%, rgba(57,105,19,1) 100%, rgba(62,62,62,1) 100%);
 }
