@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::group(['middleware' => ['role:Admin']], function () {
-        Route::get('/admin/home', [AdminController::class, 'index']);
+        Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');
     });
 
    //Route::get('/vistaGeneral', [PanelesController::class, 'show']);
