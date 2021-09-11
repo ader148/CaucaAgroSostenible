@@ -13,3 +13,16 @@ body{
 #galeria img:hover{
   border: 5px solid #fff;
 }
+
+.container-redes{
+  display: flex;
+  height: 22vh;
+  align-items: left;
+  justify-content: left;
+}
+
+.container-redes a{
+  color: #3E3E3E;
+  font-size: 15px;
+  transition: .2s;
+}

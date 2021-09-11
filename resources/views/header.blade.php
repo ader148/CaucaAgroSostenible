@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-sm navbar-dark gradient-custom" >
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark gradient-custom">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="./img/logo.png" 
@@ -22,10 +22,10 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">CANASTA AGRICOLA</a>
+            <a class="nav-link" aria-current="page" href="">CANASTA AGRICOLA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">EMPRENDIMIENTOS Y ASOCIACIONES</a>
+            <a class="nav-link" href="#emprendimientos">EMPRENDIMIENTOS Y ASOCIACIONES</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">AGRO OFERTA</a>
