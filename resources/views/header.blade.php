@@ -25,16 +25,16 @@
             <a class="nav-link" aria-current="page" href="{{ route('/canastaAgricola') }}">CANASTA AGRICOLA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#emprendimientos">EMPRENDIMIENTOS Y ASOCIACIONES</a>
+            <a class="nav-link" href="{{ route('/emprendimientos') }}">EMPRENDIMIENTOS Y ASOCIACIONES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">AGRO OFERTA</a>
+            <a class="nav-link" href="{{ route('/agroOferta') }}">AGRO OFERTA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">INVERSIONISTAS</a>
+            <a class="nav-link" href="{{ route('/inversionistas') }}">INVERSIONISTAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">EVENTOS</a>
+            <a class="nav-link" href="{{ route('/eventos') }}">EVENTOS</a>
           </li>
           <li>
               <!-- Right Side Of Navbar -->

@@ -4,7 +4,7 @@
 @section('content')
 
 <h1>
-    hola desde canasta agricola
+    hola desde inversionistas
 </h1>
 
 @endsection
