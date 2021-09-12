@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,8 @@ Route::post('/registrousuario', [RegisterController::class, 'newuser'])->name('/
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::get('/canastaAgricola', [ProductosController::class, 'index'])->name('/canastaAgricola');
 
     Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');

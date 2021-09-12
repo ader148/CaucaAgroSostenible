@@ -8,8 +8,6 @@ class AdminController extends Controller
 {
     public function index()
     {
-        var_dump('hola desde admin');
-        die();
-        return view('home');
+        return view('admin.dashboard');
     }
 }
