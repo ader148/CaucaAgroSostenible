@@ -53,6 +53,10 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');
+        Route::post('/admin/crearEvento', [EventosController::class, 'create'])->name('/admin/crearEvento');
+        Route::get('/admin/crearEvento', function () {
+            return view('eventos.crearNuevo');
+        })->name('/admin/crearEvento');
     });
 
    //Route::get('/vistaGeneral', [PanelesController::class, 'show']);
