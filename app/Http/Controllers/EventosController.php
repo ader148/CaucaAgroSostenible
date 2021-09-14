@@ -5,15 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\File;
+use App\Models\Evento;
 use Brian2694\Toastr\Facades\Toastr;
 use DateTime;
 use Illuminate\Support\Facades\Storage;
+use Throwable;
 
 class EventosController extends Controller
 {
     public function index()
     {
         return view('eventos.home');
+    }
+
+    public function list(){
+        $eventos = Evento::all();
+
+        return view('eventos.listar')->with('eventos',$eventos);
     }
 
     protected function create(Request $request)
@@ -37,16 +45,28 @@ class EventosController extends Controller
         //$date_input = getDate($time_input);
         $fecha_formateada = date("Y-m-d H:i:s", $time_input);
 
-        $posicion = $latitud + ',' + $longitud;
+        $posicion = $latitud.','.$longitud;
 
+        try {
+            Evento::create([
+                'nombre' => $nombre,
+                'descripcion' => $descripcion,
+                'ubicacion' => $posicion,
+                'fecha' => $fecha_formateada,
+                'imagen' => $url,
+            ]);
 
-        /*EventosController::create([
-            '' => '',
-        ]);*/
+            Toastr::success('Evento agregado correctamente', '', ["positionClass" => "toast-top-center"]);
 
-        Toastr::success('Panal agregado correctamente', '', ["positionClass" => "toast-top-center"]);
-        //return $url;
-        return redirect()->back();
+            //return redirect()->back();
+            return redirect('/admin/listarEventos');
+
+        } catch (Throwable $e) {
+            Toastr::error('Error al crear el Evento', '', ["positionClass" => "toast-top-center"]);
+            //return redirect()->back();
+            return redirect('/admin/listarEventos');
+        }
+
     }
 }
 

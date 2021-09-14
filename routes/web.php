@@ -57,6 +57,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/admin/crearEvento', function () {
             return view('eventos.crearNuevo');
         })->name('/admin/crearEvento');
+        Route::get('/admin/listarEventos', [EventosController::class, 'list'])->name('/admin/listarEventos');
     });
 
    //Route::get('/vistaGeneral', [PanelesController::class, 'show']);
