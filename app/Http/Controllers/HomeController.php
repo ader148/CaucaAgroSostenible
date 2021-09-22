@@ -25,6 +25,6 @@ class HomeController extends Controller
     {
         //var_dump("hola desde aca");
         //die();
-        return view('home');
+        return view('productos.home');
     }
 }

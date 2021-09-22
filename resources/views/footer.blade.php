@@ -8,7 +8,7 @@
   <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container-fluid">
       <div class="row text-center text-md-center">
-        <img src="./img/logo.png" alt="Logo CaucaAgroSostenible" class="img-logo">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo CaucaAgroSostenible" class="img-logo">
         <div class="text-center pt-1 font-weight-bold">
           <h4 class="text_uppercase mb-4">#CaucaAgroSostenible</h4>
         </div>

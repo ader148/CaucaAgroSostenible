@@ -1,7 +1,7 @@
   <nav class="navbar sticky-top navbar-expand-sm navbar-dark gradient-custom">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="./img/logo.png" 
+      <img src="{{ asset('img/logo.png') }}" 
         alt="" 
         width="30" 
         height="24" 
@@ -22,19 +22,19 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">CANASTA AGRICOLA</a>
+            <a class="nav-link" aria-current="page" href="{{ route('/canastaAgricola') }}">CANASTA AGRICOLA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#emprendimientos">EMPRENDIMIENTOS Y ASOCIACIONES</a>
+            <a class="nav-link" href="{{ route('/emprendimientos') }}">EMPRENDIMIENTOS Y ASOCIACIONES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">AGRO OFERTA</a>
+            <a class="nav-link" href="{{ route('/agroOferta') }}">AGRO OFERTA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">INVERSIONISTAS</a>
+            <a class="nav-link" href="{{ route('/inversionistas') }}">INVERSIONISTAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">EVENTOS</a>
+            <a class="nav-link" href="{{ route('/eventos') }}">EVENTOS</a>
           </li>
           <li>
               <!-- Right Side Of Navbar -->
@@ -59,6 +59,12 @@
                                   </a>
 
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @role('Admin')
+                                    <a class="dropdown-item" href="{{ route('/admin/home') }}">
+                                          Dashboard
+                                    </a>
+                                    @endrole
+
                                       <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                       document.getElementById('logout-form').submit();">
