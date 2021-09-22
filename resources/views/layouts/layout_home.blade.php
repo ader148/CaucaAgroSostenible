@@ -86,6 +86,5 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
 </body>
-@include('canasta')
 @include('footer')
 </html>
