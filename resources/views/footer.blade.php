@@ -6,7 +6,7 @@
   </head>
 
   <footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
       <div class="row text-center text-md-center">
         <img src="{{ asset('img/logo.png') }}" alt="Logo CaucaAgroSostenible" class="img-logo">
         <div class="text-center pt-1 font-weight-bold">

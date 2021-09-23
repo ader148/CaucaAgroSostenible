@@ -25,6 +25,7 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
     
 
 </head>
