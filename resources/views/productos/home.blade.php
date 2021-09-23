@@ -6,22 +6,26 @@
         <div class="text-center pt-5 font-weight-bold ">
             <strong><h1>Canasta Agricola</h1></strong>
             <br>
+            <div class="container mt-2">
+                <div class="wrap">
+                    <input type="text" id="formulario" class="form-control my-1" placeholder="¿Que deseas buscar?">
+                    <button type="submit" class="btn btn-info mb-2" id="btnbuscar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </div>
+            </div>
         </div>
-
         <!--Fila principal -->
         <div class="row ">
             <!--Columna 1 -->
             <div class="col-3">
                 <div class="list-group list-group-flush">
                     <a class="list-group-item disabled">Categoría de Productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Item productos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Cereales</a>
+                    <a href="#" class="list-group-item list-group-item-action">Hortalizas</a>
+                    <a href="#" class="list-group-item list-group-item-action">Frutales</a>
+                    <a href="#" class="list-group-item list-group-item-action">Raices y Tuberculos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Leguminosas</a>
                 </div>
             </div>
             
