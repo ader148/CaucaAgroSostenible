@@ -42,12 +42,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row text-center">
                             <div class="col-md-12">
                                 <a href="" style="color:#92ac84;">No tienes una cuenta? haz clic aqui</a>
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row text-center">
                             <div class="col-md-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -98,7 +98,7 @@
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </span> 
                                 @enderror
                             </div>
                         </div>

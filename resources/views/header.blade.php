@@ -1,4 +1,4 @@
-  <nav class="navbar sticky-top navbar-expand-sm navbar-dark gradient-custom">
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark gradient-custom ">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="{{ asset('img/logo.png') }}" 
@@ -20,7 +20,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav px-3">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('/canastaAgricola') }}">CANASTA AGRICOLA</a>
           </li>
