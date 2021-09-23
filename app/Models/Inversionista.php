@@ -9,4 +9,12 @@ class Inversionista extends Model
 {
     use HasFactory;
     protected $table = "inversionista";
+
+    protected $fillable = [
+        'nombre',
+        'imagen',
+        'descripcion',
+        'correo',
+        'telefono',
+    ];  
 }

@@ -48,15 +48,15 @@
                         </li>
 
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="{{ route('/admin/listarInversionistas') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Inversionistas</span></a>
                         </li>
                         <li>
-                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <a href="{{ route('/admin/listarProductos') }}" class="nav-link px-0 align-middle ">
                                 <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">productos</span></a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0 align-middle">
+                            <a href="{{ route('/admin/listarOfertas') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Ofertas</span> </a>
                         </li>
                     </ul>

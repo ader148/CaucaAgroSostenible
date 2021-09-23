@@ -21,15 +21,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
-
-
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -53,14 +44,35 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');
+
+        //------eventos admin --------
         Route::post('/admin/crearEvento', [EventosController::class, 'create'])->name('/admin/crearEvento');
         Route::get('/admin/crearEvento', function () {
             return view('eventos.crearNuevo');
         })->name('/admin/crearEvento');
         Route::get('/admin/listarEventos', [EventosController::class, 'list'])->name('/admin/listarEventos');
+
+        //----- inversionistas admin --------
+        Route::get('/admin/listarInversionistas', [InversionistasController::class, 'list'])->name('/admin/listarInversionistas');
+        Route::post('/admin/crearInversionista', [InversionistasController::class, 'create'])->name('/admin/crearInversionista');
+        Route::get('/admin/crearInversionista', function () {
+            return view('inversionistas.crearNuevo');
+        })->name('/admin/crearInversionista');
+
+        //---- productos admin --------
+        Route::get('/admin/listarProductos', [ProductosController::class, 'list'])->name('/admin/listarProductos');
+        Route::post('/admin/crearProducto', [ProductosController::class, 'create'])->name('/admin/crearProducto');
+        Route::get('/admin/crearProducto', function () {
+            return view('productos.crearNuevo');
+        })->name('/admin/crearProducto');
+
+        //---- ofertas admin ----
+        Route::get('/admin/listarOfertas', [OfertasController::class, 'list'])->name('/admin/listarOfertas');
+        Route::post('/admin/crearOferta', [OfertasController::class, 'create'])->name('/admin/crearOferta');
+        Route::get('/admin/crearOferta', function () {
+            return view('ofertas.crearNuevo');
+        })->name('/admin/crearoferta');
+
+
     });
-
-   //Route::get('/vistaGeneral', [PanelesController::class, 'show']);
-
-   //Route::post('agregarPanal', [PanelesController::class, 'store']);
 });
