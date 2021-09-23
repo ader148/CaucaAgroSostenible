@@ -12,7 +12,7 @@
         <div style="min-height: 100px; min-width: 100px;">
             <h1 style="color:#316317; text-align: center;font-weight: bold;">Crear Cuenta</h1>
             <div style="text-align: center; margin-top: 6%;">
-                <a style="text-align: center; color: #d8d7d7; cursor: pointer;">¿YA ESTAS REGISTRADO? INGRESA</a>
+                <a href="" style="text-align: center; color: #d8d7d7; cursor: pointer;">¿Ya estas registrado? Ingresa</a>
             </div>
 
             <div class="card" style="border: none;">
