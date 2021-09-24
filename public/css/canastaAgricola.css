@@ -5,6 +5,10 @@
   overflow-x: hidden;
 }
 
+.title h1{
+  font-family: 'DM Sans', sans-serif;
+  color: #3B4848;
+}
 #canasta h5{
   font-weight: 500;
   font-size: 12px;
@@ -48,23 +52,48 @@
     object-fit: cover;
 }
 
-#btnBuscar{
-    width: 40px;
-    height: 36px;
-    border: 1px solid rgb(110,158,57);
-    background: rgb(110,158,57);
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
 
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
 
+.searchTerm {
+  width: 100%;
+  border: 1px solid #8F8E8E;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #8F8E8E;
+}
+
+.searchTerm:focus{
+  color: #3B4848;
+}
+
+.searchButton:hover{
+  background: #7D7D7D;
+}
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: none;
+  background: #8F8E8E;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/*Resize the wrap to see the search bar change!*/
 .wrap{
   width: 30%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

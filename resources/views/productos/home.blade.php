@@ -3,22 +3,29 @@
 
 @section('content')
     <section name="canastaAgricola" id="canasta" class="container-fluid">
-        <div class="text-center pt-5 font-weight-bold ">
+        <div class="title text-center">
             <strong><h1>Canasta Agricola</h1></strong>
-            <br>
-            <div class="container mt-2">
-                <div class="wrap">
-                    <input type="text" id="formulario" class="form-control my-1" placeholder="¿Que deseas buscar?">
-                    <button type="submit" class="btn btn-info mb-2" id="btnbuscar">
-                        <i class="fa fa-search"></i>
-                    </button>
+        </div>
+         <!--Barra de busqueda -->
+        <div class="row">
+            <div class="col">
+                <div class="container mb-5">
+                    <div class="wrap">
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder=" ¿Qué deseas buscar?">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
+
         <!--Fila principal -->
-        <div class="row ">
+        <div class="row ml-3 mt-3">
             <!--Columna 1 -->
-            <div class="col-3">
+            <div class="col-3 mr-5 mt-3">
                 <div class="list-group list-group-flush">
                     <a class="list-group-item disabled">Categoría de Productos</a>
                     <a href="#" class="list-group-item list-group-item-action">Cereales</a>
@@ -32,8 +39,8 @@
             <!--Columna 2 -->
             <div class="col-8">
                 <!--Fila 1 dentro de la columna 2 -->
-                <div class="row">
-                    <div class="container ">
+                <div class="row ml-4">
+                    <div class="container">
                         <div class="card-deck" style="width: 50rem;">
                             <div class="card text-center">
                                 <div class="card-block">
@@ -72,7 +79,7 @@
                 </div>
                 <br><br>
                 <!--Fila 2 dentro de la columna 2 -->
-                <div class="row">
+                <div class="row ml-4">
                     <div class="container">
                         <div class="card-deck" style="width: 50rem;">
                             <div class="card text-center">
