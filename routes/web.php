@@ -52,13 +52,24 @@ Route::group(['middleware' => 'auth'], function(){
         })->name('/admin/crearEvento');
         Route::get('/admin/listarEventos', [EventosController::class, 'list'])->name('/admin/listarEventos');
 
+        Route::post('/admin/EditarEvento', [EventosController::class, 'edit'])->name('/admin/EditarEvento');
+        Route::get('/admin/EditarEvento/{idEvent?}', [EventosController::class, 'vistaEditar'])->name('/admin/EditarEvento/{idEvent?}');
+
+        Route::post('/admin/EliminarEvento', [EventosController::class, 'delete'])->name('/admin/EliminarEvento');
+
         //----- inversionistas admin --------
         Route::get('/admin/listarInversionistas', [InversionistasController::class, 'list'])->name('/admin/listarInversionistas');
         Route::post('/admin/crearInversionista', [InversionistasController::class, 'create'])->name('/admin/crearInversionista');
+
         Route::get('/admin/crearInversionista', function () {
             return view('inversionistas.crearNuevo');
         })->name('/admin/crearInversionista');
 
+        Route::get('/admin/EditarInversionista/{idinver?}', [InversionistasController::class, 'vistaEditar'])->name('/admin/EditarInversionista/{idinver?}');
+        Route::post('/admin/EditarInversionista', [InversionistasController::class, 'edit'])->name('/admin/EditarInversionista');
+
+        Route::post('/admin/EliminarInvesionista', [InversionistasController::class, 'delete'])->name('/admin/EliminarInvesionista');
+        
         //---- productos admin --------
         Route::get('/admin/listarProductos', [ProductosController::class, 'list'])->name('/admin/listarProductos');
         Route::post('/admin/crearProducto', [ProductosController::class, 'create'])->name('/admin/crearProducto');

@@ -24,6 +24,67 @@ class EventosController extends Controller
         return view('eventos.listar')->with('eventos',$eventos);
     }
 
+
+    protected function delete(Request $request){
+        $id = $request->get('id');
+        
+        try {
+            $res=Evento::where('id',$id)->delete();    
+            echo(1);
+
+        } catch (Throwable $e) {
+            echo(0);
+        }
+
+    }
+
+
+    public function vistaEditar(){
+        $id_evento = Request('idEvent');
+
+        $evento = Evento::find($id_evento);
+
+        return view('eventos.editar')->with('evento',$evento);
+    }
+
+    protected function edit(Request $request){
+
+        $id_evento = $request->input('id_evento');
+        
+        $nombre = $request->input('edit_nombre_evento');
+        $descripcion = $request->input('edit_descripcion_evento');
+        $latitud = $request->input('edit_txtLat');
+        $longitud = $request->input('edit_txtLng');
+        $fecha = $request->input('edit_fecha_evento');
+        $hora = $request->input('edit_hora_evento');
+
+        $time_input = strtotime("$fecha $hora");
+
+        $fecha_formateada = date("Y-m-d H:i:s", $time_input);
+
+        $posicion = $latitud.','.$longitud;
+
+        //buscamos el evento
+        $evento = Evento::find($id_evento);
+
+        $evento->nombre = $nombre;
+        $evento->descripcion = $descripcion;
+        $evento->ubicacion = $posicion;
+        $evento->fecha = $fecha_formateada;
+
+        try {
+            $evento->save();
+
+            Toastr::success('Evento actualizado correctamente', '', ["positionClass" => "toast-top-center"]);
+            return redirect('/admin/listarEventos');
+
+        } catch (Throwable $e) {
+            Toastr::error('Error al actualizar el Evento', '', ["positionClass" => "toast-top-center"]);
+            return redirect('/admin/listarEventos');
+        }
+
+    }
+
     protected function create(Request $request)
     {
         $request->validate([

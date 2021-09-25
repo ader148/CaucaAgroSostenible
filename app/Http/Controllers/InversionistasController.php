@@ -56,4 +56,72 @@ class InversionistasController extends Controller
         }
 
     }
+
+
+    public function vistaEditar(){
+
+        $id_inversionista = Request('idinver');
+
+        $inversionista = Inversionista::find($id_inversionista);
+
+        return view('inversionistas.editar')->with('inversionista',$inversionista);
+    }
+
+
+    protected function delete(Request $request){
+        
+        $id = $request->get('id');
+
+        try {
+            $res=Inversionista::where('id',$id)->delete();    
+            echo(1);
+
+        } catch (Throwable $e) {
+            echo(0);
+        }
+        
+
+    }
+
+
+    protected function edit(Request $request){
+
+        
+        /*$request->validate([
+            'edit_file' => 'required|image'
+        ]);*/
+
+        $id_inverisonista = $request->input('id_inversionista');
+
+        //$imagen = $request->file('edit_file')->store('public/inversionistas');
+        //$url = Storage::url($imagen);
+
+        $nombre = $request->input('edit_nombre_inversionista');
+        $descripcion = $request->input('edit_descripcion_inversionista');
+        $correo = $request->input('edit_email_inversionista');
+        $telefono = $request->input('edit_telefono_inversionista');
+        //$imagen = $url;
+
+
+        //actualizamos el inversionista       
+        $inversionista = Inversionista::find($id_inverisonista);
+
+        $inversionista->nombre = $nombre;
+        $inversionista->descripcion = $descripcion;
+        $inversionista->correo = $correo;
+        $inversionista->telefono = $telefono;
+
+        try {
+            $inversionista->save();
+
+            Toastr::success('Inversionista actualizado correctamente', '', ["positionClass" => "toast-top-center"]);
+            return redirect('/admin/listarInversionistas');
+
+        } catch (Throwable $e) {
+            Toastr::error('Error al actualizar el Inversionista', '', ["positionClass" => "toast-top-center"]);
+            return redirect('/admin/listarInversionistas');
+        }
+
+
+    }
 }
