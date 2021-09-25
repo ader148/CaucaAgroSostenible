@@ -1,6 +1,5 @@
 @extends('layouts.layout_home')
 
-
 @section('content')
     <section name="canastaAgricola" id="canasta" class="container-fluid">
         <div class="title text-center">
@@ -41,7 +40,7 @@
                 <!--Fila 1 dentro de la columna 2 -->
                 <div class="row ml-4">
                     <div class="container">
-                        <div class="card-deck" style="width: 50rem;">
+                        <div class="card-deck" style="width: 50rem;" href="#">
                             <div class="card text-center">
                                 <div class="card-block">
                                     <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
