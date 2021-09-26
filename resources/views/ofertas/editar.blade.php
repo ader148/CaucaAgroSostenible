@@ -4,36 +4,38 @@
 
 
 <div class="container">
-    <h2>Crear Oferta</h2>
+    <h2>Editar Oferta</h2>
 
     <div class="row">
-        <form action="{{ route('/admin/crearOferta') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('/admin/EditarOferta') }}" method="post" enctype="multipart/form-data">
 
             @csrf
+
+            <input type="hidden" id="id_oferta" name="id_oferta" value="{{ $oferta->id }}">
             <div class="form-group">
                 <label for="nombre_evento">Nombre de la oferta</label>
-                <input type="text" name="nombre_oferta" id="nombre_oferta" class="form-control" id="" placeholder="Nombre de la oferta">
+                <input type="text" name="edit_nombre_oferta" id="edit_nombre_oferta" class="form-control" id="" value="{{ $oferta->nombre }}">
             </div>
 
             <div class="form-group">
                 <label for="descripcion_evento">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad_oferta" name="cantidad_oferta" rows="3" placeholder="Especifique la cantidad minima para aplicar el descuento"></input>
+                <input type="number" class="form-control" id="edit_cantidad_oferta" name="edit_cantidad_oferta" rows="3" value="{{ $oferta->cantidad }}"></input>
             </div>
 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="fecha_evento">Descuento</label>
-                        <input type="number" class="form-control" id="descuento_oferta" name="descuento_oferta" placeholder="10000">
+                        <input type="number" class="form-control" id="edit_descuento_oferta" name="edit_descuento_oferta" value="{{ $oferta->descuento }}">
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="hora_evento">Tipo Descuento</label><br>
-                        <select id="tipo_descuento_oferta" name="tipo_descuento_oferta" class="form-control" required>
+                        <select id="edit_tipo_descuento_oferta" name="edit_tipo_descuento_oferta" class="form-control" required>
                             <option value="0">Seleccione una Opción</option>
-                            <option value="porcentaje">porcentaje</option>
-                            <option value="precio">precio</option>
+                            <option value="porcentaje" {{$oferta->tipo_descuento == 'porcentaje'  ? 'selected' : ''}}>porcentaje</option>
+                            <option value="precio" {{$oferta->tipo_descuento == 'precio'  ? 'selected' : ''}}>precio</option>
                         </select>
                     </div>
                 </div>

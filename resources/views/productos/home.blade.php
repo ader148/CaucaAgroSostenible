@@ -1,7 +1,7 @@
 @extends('layouts.layout_home')
 
 @section('content')
-    <section name="canastaAgricola" id="canasta" class="container-fluid">
+    <section name="canastaAgricola" id="canasta" class="container-fluid" style="margin-bottom: 7%;">
         <div class="title text-center">
             <strong><h1>Canasta Agricola</h1></strong>
         </div>
@@ -39,83 +39,26 @@
             <div class="col-8">
                 <!--Fila 1 dentro de la columna 2 -->
                 <div class="row ml-4">
-                    <div class="container">
-                        <div class="card-deck" style="width: 50rem;" href="#">
+                        @foreach ($productos as $producto)
+                        <div class="card-deck col-sm-4" style="width: 50rem;" href="#">                           
+                            <!-- inicio producto -->                        
                             <div class="card text-center">
+                                <input type="hidden" value="producto_id" name="producto_id" value="{{ $producto->id }}">
                                 <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
+                                    <img alt="Card image cap" class="card-img-top img-fluid" src="{{ URL::asset($producto->imagen) }}">
                                     <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
+                                        <h5 class="card-title">{{$producto->nombre }}</h5>
+                                        <h6>$ {{ $producto->precio }}</h6>
                                         <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card text-center">
-                                <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
-                                        <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card text-center">
-                                <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
-                                        <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- fin del producto -->                            
                         </div>
-                    </div>
+                        @endforeach                    
                 </div>
-                <br><br>
-                <!--Fila 2 dentro de la columna 2 -->
-                <div class="row ml-4">
-                    <div class="container">
-                        <div class="card-deck" style="width: 50rem;">
-                            <div class="card text-center">
-                                <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
-                                        <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card text-center">
-                                <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
-                                        <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card text-center">
-                                <div class="card-block">
-                                    <img alt="Card image cap" class="card-img-top img-fluid" src="./img/img2.jpg">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Titulo del producto</h5>
-                                        <h6>Precio</h6>
-                                        <a href="#" class="producto"> <i class=""> Añadir al carrito</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+           
             </div>
         </div>
  
