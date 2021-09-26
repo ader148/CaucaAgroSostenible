@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,6 +26,8 @@ class HomeController extends Controller
     {
         //var_dump("hola desde aca");
         //die();
-        return view('productos.home');
+        $productos = Producto::all();
+
+        return view('productos.home')->with('productos',$productos);
     }
 }

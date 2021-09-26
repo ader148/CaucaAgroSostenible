@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\EmprendimientosController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\HomeController;
@@ -41,6 +42,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/agroOferta', [OfertasController::class, 'index'])->name('/agroOferta');
     Route::get('/inversionistas', [InversionistasController::class, 'index'])->name('/inversionistas');
     Route::get('/eventos', [EventosController::class, 'index'])->name('/eventos');
+
+    //carrito
+    Route::get('/carrito', [CartController::class, 'show'])->name('/carrito');
 
     Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');
