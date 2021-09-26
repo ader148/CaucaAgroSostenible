@@ -77,12 +77,23 @@ Route::group(['middleware' => 'auth'], function(){
             return view('productos.crearNuevo');
         })->name('/admin/crearProducto');
 
+        Route::get('/admin/EditarProducto/{idProd?}', [ProductosController::class, 'vistaEditar'])->name('/admin/EditarProducto/{idProd?}');
+        Route::post('/admin/EditarProducto', [ProductosController::class, 'edit'])->name('/admin/EditarProducto');
+
+        Route::post('/admin/EliminarProducto', [ProductosController::class, 'delete'])->name('/admin/EliminarProducto');
+
+
         //---- ofertas admin ----
         Route::get('/admin/listarOfertas', [OfertasController::class, 'list'])->name('/admin/listarOfertas');
         Route::post('/admin/crearOferta', [OfertasController::class, 'create'])->name('/admin/crearOferta');
         Route::get('/admin/crearOferta', function () {
             return view('ofertas.crearNuevo');
         })->name('/admin/crearoferta');
+
+
+        Route::get('/admin/EditarOferta/{idOfer?}', [OfertasController::class, 'vistaEditar'])->name('/admin/EditarOferta/{idOfer?}');
+        Route::post('/admin/EditarOferta', [OfertasController::class, 'edit'])->name('/admin/EditarOferta');
+        Route::post('/admin/EliminarOferta', [OfertasController::class, 'delete'])->name('/admin/EliminarOferta');
 
 
     });

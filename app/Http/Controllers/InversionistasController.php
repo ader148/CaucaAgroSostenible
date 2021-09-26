@@ -78,8 +78,7 @@ class InversionistasController extends Controller
 
         } catch (Throwable $e) {
             echo(0);
-        }
-        
+        }   
 
     }
 
