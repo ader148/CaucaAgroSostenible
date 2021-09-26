@@ -79,6 +79,10 @@
                           @endguest
                     </ul>
           </li>
+
+          <li style="position: absolute;right: 3%; top: 20%;">
+             <a href="" alt="Carrito de compras"><i class="fs-4 bi-cart" style="color: white;"></i></a>
+          </li>
         </ul>
       </div>
     </div>
