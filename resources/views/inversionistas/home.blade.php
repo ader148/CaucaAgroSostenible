@@ -15,7 +15,7 @@
                 <strong><h3 class="mb-4">Comunidad de Inversionistas</h3></strong>
             </div>
 
-<<<<<<< HEAD
+
                         <div class="col mt-5">
                         <button type="submit" class="btn btn-primary" style="color: white; background-color: #679133; border: none; border-radius: 20px; padding-left: 40px; padding-right: 40px;font-size: 14pt;">{{ __('Leer más') }}</button>
                         </div>
@@ -41,10 +41,10 @@
                     </div>
                 </div>
             </div>
-=======
+
             @foreach ($inversionistas as $inversionista)
             <!-- inicio inversionista -->
->>>>>>> origin
+
             <div class="col-md-4">
                 <div class="card card-01">
                     <div class="profile-box">

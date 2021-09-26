@@ -30,6 +30,8 @@
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
     <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inversionistas.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
 </head>
 <body>
