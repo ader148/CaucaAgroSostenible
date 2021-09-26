@@ -11,7 +11,11 @@ use Throwable;
 class InversionistasController extends Controller
 {
     public function index(){
-        return view('inversionistas.home');
+
+        $inversionistas = Inversionista::all();
+
+        return view('inversionistas.home')->with('inversionistas',$inversionistas);
+        
     }
 
 

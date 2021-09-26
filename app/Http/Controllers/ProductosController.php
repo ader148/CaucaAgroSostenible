@@ -11,7 +11,9 @@ use Throwable;
 class ProductosController extends Controller
 {
     public function index(){
-        return view('productos.home');
+
+        $productos = Producto::all();
+        return view('productos.home')->with('productos',$productos);
     }
 
     public function list(){
