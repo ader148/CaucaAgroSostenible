@@ -20,15 +20,18 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Tipo Descuento</th>
                     <th scope="col">Descuento</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($ofertas as $oferta)
                 <tr>
+                    <th><img src="{{ url($oferta->imagen) }}" alt="" style="height: auto; width: 100px;"></th>
                     <th>{{ $oferta->nombre }}</th>
                     <td>{{ $oferta->cantidad }}</td>
                     <td>{{ $oferta->tipo_descuento }}</td>

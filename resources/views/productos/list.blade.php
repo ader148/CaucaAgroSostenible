@@ -20,6 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">precio</th>
@@ -29,6 +30,7 @@
             <tbody>
                 @foreach ($productos as $producto)
                 <tr>
+                    <th><img src="{{ url($producto->imagen) }}" alt="" style="height: 100px; width: auto;"></th>
                     <th>{{ $producto->nombre }}</th>
                     <td>{{ $producto->cantidad }}</td>
                     <td>{{ $producto->precio }}</td>                    
@@ -66,6 +68,17 @@
   </div>
 </div>
 <!-- fin -->
+
+
+<style>
+     th{
+        vertical-align: middle !important;
+    }
+
+    td{
+        vertical-align: middle !important;
+    }
+</style>
 
 <script>
     function launchModal(nameprod,idprod){
