@@ -42,8 +42,8 @@
 }
 
 .social-box i {
-  border:1px solid #9BCB59;
-  color:#9BCB59;
+  border:1px solid #747474;
+  color:#747474;
   width:30px; 
   height:30px; 
   border-radius:50%;
@@ -51,7 +51,7 @@
 }
 
 .social-box i:hover{
-  background:#9BCB59;
+  background:#B8B8B7;
   color:#fff;
 }
 

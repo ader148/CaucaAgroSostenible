@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="text-center pt-5 font-weight-bold ">
+<div class="text-center pt-5 mb-4 font-weight-bold ">
         <strong><h1>Emprendimientos y Asociaciones</h1></strong>
         <br>
     </div>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-1">
-                <div class="container-redes text-left pt-1 font-weight-bold ">
+                <div class="text-left pt-1 font-weight-bold">
                     <h3>#DelCaucaATuMesa</h3>
                 </div>
                 <div class="text-justify pt-2">

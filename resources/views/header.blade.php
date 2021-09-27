@@ -38,7 +38,7 @@
           </li>
           <li>
               <!-- Right Side Of Navbar -->
-              <ul class="navbar-nav ml-auto px-5">
+              <ul class="navbar-nav ml-auto ">
                           <!-- Authentication Links -->
                           @guest
                               @if (Route::has('login'))
@@ -68,7 +68,7 @@
                                       <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                       document.getElementById('logout-form').submit();">
-                                          {{ __('Logout') }}
+                                          {{ __('CERRAR SESIÓN') }}
                                       </a>
 
                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -84,6 +84,7 @@
              <a href="{{ route('/carrito') }}" alt="Carrito de compras"><i class="fs-4 bi-cart" style="color: white;"></i></a>
           </li>
         </ul>
+        
       </div>
     </div>
   </nav>
