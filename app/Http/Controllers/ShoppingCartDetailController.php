@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
+use App\Models\ShoppingCartDetail;
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class ShoppingCartDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,22 +41,21 @@ class CartController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\ShoppingCartDetail  $shoppingCartDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(Cart $cart)
+    public function show(ShoppingCartDetail $shoppingCartDetail)
     {
-        //dd("hola desde carrito");
-        return view('Carrito.show');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\ShoppingCartDetail  $shoppingCartDetail
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cart $cart)
+    public function edit(ShoppingCartDetail $shoppingCartDetail)
     {
         //
     }
@@ -65,10 +64,10 @@ class CartController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\ShoppingCartDetail  $shoppingCartDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function update(Request $request, ShoppingCartDetail $shoppingCartDetail)
     {
         //
     }
@@ -76,10 +75,10 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Cart  $cart
+     * @param  \App\Models\ShoppingCartDetail  $shoppingCartDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy(ShoppingCartDetail $shoppingCartDetail)
     {
         //
     }
