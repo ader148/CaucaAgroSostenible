@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InversionistasController;
 use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/agroOferta', [OfertasController::class, 'index'])->name('/agroOferta');
     Route::get('/inversionistas', [InversionistasController::class, 'index'])->name('/inversionistas');
     Route::get('/eventos', [EventosController::class, 'index'])->name('/eventos');
+
+    //ruta para rgegar producto al carrito
+    Route::post('/agregarProductoCarrito', [ShoppingCartController::class, 'store'])->name('/agregarProductoCarrito');
 
     //carrito
     Route::get('/carrito', [CartController::class, 'show'])->name('/carrito');

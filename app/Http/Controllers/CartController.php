@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use App\Models\ShoppingCart;
+use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
@@ -46,7 +48,13 @@ class CartController extends Controller
      */
     public function show(Cart $cart)
     {
-        //dd("hola desde carrito");
+        
+        //recuperamos el carrito de la session del usuario
+        /*$session_name = 'shopping_cart_id';
+        $shopping_cart_id = Session::get($session_name);
+        $shopping_cart = ShoppingCart::findOrCreateBySessionId($shopping_cart_id);*/
+
+        //dd($shopping_cart->shopping_cart_details());
         return view('Carrito.show');
     }
 

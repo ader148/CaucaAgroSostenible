@@ -25,31 +25,20 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($shopping_cart->shopping_cart_details as $shopping_cart_detail )
                 <tr>
-                    <th>producto 1</th>
-                    <td>1</td>
-                    <td>10000</td>
+                    <th>{{ $shopping_cart_detail->product->nombre }}</th>
+                    <td>{{ $shopping_cart_detail->product->cantidad }}</td>
+                    <td>{{ $shopping_cart_detail->product->precio }}</td>
                     <td>
-                        <a onclick="launchModal('producto 1',2);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
+                        <a onclick="deleteProductoCarrito(<?php  echo $shopping_cart_detail->product->id  ?>);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
                     </td>
-                </tr>
-                <tr>
-                    <th>producto 2</th>
-                    <td>1</td>
-                    <td>20000</td>
-                    <td>
-                        <a onclick="launchModal('producto 2',3);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>producto 3</th>
-                    <td>1</td>
-                    <td>30000</td>
-                    <td>
-                        <a onclick="launchModal('producto 3',4);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
-                    </td>
-                </tr>
 
+                    
+                </tr>
+                @endforeach
+                
+                
                 <!-- fila de total -->
                 <tr>
                     <td>
@@ -57,7 +46,7 @@
                     </td>
                     <td></td>
                     <td>
-                        <h2>$250.000</h2>
+                        <h2>$ {{ $shopping_cart->total_price()}} </h2>
                     </td>
                     <td></td>
                 </tr>
