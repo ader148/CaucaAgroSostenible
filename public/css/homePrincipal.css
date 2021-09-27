@@ -1,0 +1,39 @@
+#homePrincipal{
+  font-family: 'DM Sans', sans-serif;
+}
+
+#homePrincipal .col-lg-6{
+  margin: 0 !important;
+  padding: 25px;
+}
+#homePrincipal .imgGaleria{
+  width: 100%;
+  height: 250px;
+}
+
+#homePrincipal .imgGaleria:hover{
+  border: 5px solid #f7f7f7;
+}
+.imgHP{
+  border-radius: 30px;
+}
+
+.slide{
+  margin-top: 10px;
+}
+
+.slide img{
+  height: 65vh;
+  border-radius: 30px;
+}
+
+.carousel h5{
+  color: #fff;
+}
+
+.text{
+  font-size: 18px;
+  color: 3E3E3E;
+}
+
+

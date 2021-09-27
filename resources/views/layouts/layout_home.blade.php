@@ -30,6 +30,7 @@
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
     <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inversionistas.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/homePrincipal.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 
