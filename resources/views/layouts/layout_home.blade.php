@@ -31,6 +31,8 @@
     <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inversionistas.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
 </head>
@@ -44,6 +46,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+    
 </body>
 @include('footer')
+
 </html>

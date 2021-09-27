@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
 use App\Models\ShoppingCart;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Session;
+
 
 class ShoppingCartController extends Controller
 {
@@ -35,7 +39,33 @@ class ShoppingCartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //esta ruta se usa para agregar un producto al carrito 
+        //dd("hola desde store");
+        //dd($request);
+
+        //debemos optener el precio del producto agregar al carrito
+
+        //debemos optener tamben el id de carrito actual que esta creado en session
+        $session_name = 'shopping_cart_id';
+        $shopping_cart_id = Session::get($session_name);
+        $shopping_cart = ShoppingCart::findOrCreateBySessionId($shopping_cart_id);
+        $id_shopping_cart = $shopping_cart->id;
+
+        $id_producto = $request->get('id_producto');
+
+        //buscamos el producto 
+        $producto = Producto::find($id_producto);
+
+        
+
+        //creamos el registro en la tabla de detalle de carrito 
+        $shopping_cart->shopping_cart_details()->create(
+            ['quantity'=>1,
+            'price'=>$producto->precio,
+            'product_id'=>$id_producto,
+            ]);
+
+       
     }
 
     /**
