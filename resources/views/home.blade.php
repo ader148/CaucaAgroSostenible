@@ -69,27 +69,81 @@
         <button type="submit" class="btn btn-primary" style="color: white; background-color: #679133; border: none; border-radius: 20px; padding-left: 40px; padding-right: 40px;font-size: 14pt;">{{ __('Leer más') }}</button>
     </div>
   </div>
-  <div class="row mb-5 ml-5 mr-5">
+  <div class="row mb-2 ml-5 mr-5">
     <hr width=100%  text-align="center"  size=10 color="#8E8E8F">
-    <strong><h1 class="text-center mt-5 mb-4">Nuestros Productos</h1></strong>
-      <div class="col-lg-4">
-        <img src="./img/frutas.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/hortalizas.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/cereal.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/tuberculo.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/berenjena.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
-      <div class="col-lg-4">
-        <img src="./img/citrico.jpg" alt="Galeria Imagen" class="imgGaleria img-fluid mb-5">
-      </div>
+    <strong><h1 class="text-center mt-5">Nuestros Productos</h1></strong>
+    <div class="container">
+        <div class="box">
+            <div class="image">
+                <img src="./img/legumbre.jpg" alt="">
+            </div>
+            <!-- image -->
+            <div class="content">
+                <h2>Legumbres</h2>
+                <p class="text-justify">Las legumbres constituyen un grupo de alimentos muy homogéneo, desarrollados a partir del gineceo, de un solo carpelo y que se abre tanto por la sutura ventral como por el nervio dorsal, en dos valvas y con las semillas en una hilera ventral. Estas vainas suelen ser rectas y carnosas. Por lo general poseen una carne interior esponjosa, aterciopelada y de color blanco. Su parte interna corresponde al mesocarpio y al endocarpio del fruto.</p>
+            </div>
+            <!-- content -->
+        </div>
+        <!-- box -->
+        <div class="box">
+            <img src="./img/frutas.jpg" alt="">
+            <div class="content">
+                <h2>Frutales</h2>
+                <p class="text-justify">Se denomina fruta a aquellos frutos comestibles obtenidos de plantas cultivadas o silvestres que, por su sabor generalmente dulce-acidulado, su aroma intenso y agradable y sus propiedades nutritivas</p>
+            </div>
+            <!-- content -->
+        </div>
+        <!-- box -->
+        <div class="box">
+            <div class="image">
+                <img src="./img/hortalizas.jpg" alt="">
+            </div>
+            <!-- image -->
+            <div class="content">
+                <h2>Hortalizas</h2>
+                <p class="text-justify">Las hortalizas son un conjunto de plantas cultivadas generalmente en huertos o regadíos, que se consumen como alimento, ya sea de forma cruda o preparadas culinariamente, y que incluye las verduras y las legumbres.</p>
+            </div>
+            <!-- content -->
+        </div>
+        <!-- box -->
+        <div class="box">
+            <div class="image">
+                <img src="./img/tuberculo.jpg" alt="">
+            </div>
+            <!-- image -->
+            <div class="content">
+                <h2>Tuberculos</h2>
+                <p class="text-justify">Un tubérculo es un tallo subterráneo​ modificado y engrosado donde se acumulan los nutrientes de reserva para la planta. Las especies que producen tubérculos también se sirven de ellos para propagarse en forma vegetativa, aunque sus semillas sean viables.</p>
+            </div>
+            <!-- content -->
+        </div>
+        <!-- box -->
+        <div class="box">
+            <div class="image">
+                <img src="./img/frutosSecos.jpg" alt="">
+            </div>
+            <!-- image -->
+            <div class="content">
+                <h2>Frutos Secos</h2>
+                <p class="text-justify">Los frutos secos son llamados así porque todos tienen una característica en común: en su composición natural tienen menos de un 50 % de agua. No se deben confundir con los productos provenientes de frutas desecadas. En los frutos secos la parte aprovechable no es el fruto en sí, sino la semilla. </p>
+            </div>
+            <!-- content -->
+        </div>
+        <!-- box -->
+        <div class="box">
+            <div class="image">
+                <img src="./img/cereal.jpg" alt="">
+            </div>
+            <!-- image -->
+            <div class="content">
+                <h2>Cereales</h2>
+                <p class="text-justify">Los cereales son plantas de la familia de las poáceas cultivadas por su grano. Incluyen cereales mayores como el trigo, el arroz, el maíz, la cebada, la avena y el centeno, y cereales menores como el sorgo, el mijo, el teff, el triticale, el alpiste o la lágrima de Job.​</p>
+            </div>
+            <!-- content -->
+        </div>
+    </div>
+    <!-- container -->
+
   </div>
 </section>
 
