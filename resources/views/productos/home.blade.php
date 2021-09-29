@@ -16,8 +16,8 @@
             <div class="container mb-5">
                 <div class="wrap">
                     <div class="search">
-                        <input type="text" class="searchTerm" placeholder=" ¿Qué deseas buscar?">
-                        <button type="submit" class="searchButton">
+                        <input type="text" id="searchTerm" class="searchTerm" placeholder=" ¿Qué deseas buscar?">
+                        <button type="submit" id="buttonSearch"class="searchButton">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -130,5 +130,4 @@
     }
 
 </script>
-
 @endsection
