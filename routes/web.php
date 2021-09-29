@@ -52,6 +52,8 @@ Route::group(['middleware' => 'auth'], function(){
     //ruta para rgegar producto al carrito
     Route::post('/agregarProductoCarrito', [ShoppingCartController::class, 'store'])->name('/agregarProductoCarrito');
 
+    Route::post('/EliminarProductoCarrito', [ShoppingCartController::class, 'delete'])->name('/EliminarProductoCarrito');
+
     //carrito
     Route::get('/carrito', [CartController::class, 'show'])->name('/carrito');
 

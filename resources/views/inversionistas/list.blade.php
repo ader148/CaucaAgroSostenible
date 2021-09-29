@@ -20,6 +20,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">correo</th>
@@ -30,6 +31,7 @@
             <tbody>
                 @foreach ($inversionistas as $inversionista)
                 <tr>
+                    <th><img src="{{ url($inversionista->imagen) }}" alt="" style="height: 100px; width: auto;"></th>
                     <th>{{ $inversionista->nombre }}</th>
                     <td>{{ $inversionista->descripcion }}</td>
                     <td>{{ $inversionista->correo }}</td>
@@ -67,6 +69,16 @@
   </div>
 </div>
 <!-- fin -->
+
+<style>
+     th{
+        vertical-align: middle !important;
+    }
+
+    td{
+        vertical-align: middle !important;
+    }
+</style>
 
 
 <script>

@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use App\Models\ShoppingCart;
+use App\Models\ShoppingCartDetail;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Session;
-
+use Throwable;
 
 class ShoppingCartController extends Controller
 {
@@ -111,5 +112,17 @@ class ShoppingCartController extends Controller
     public function destroy(ShoppingCart $shoppingCart)
     {
         //
+    }
+
+    protected function delete(Request $request){
+        $id_shopping_detail = $request->get('id');
+        
+        try {
+            $res=ShoppingCartDetail::where('id',$id_shopping_detail)->delete();    
+            echo(1);
+
+        } catch (Throwable $e) {
+            echo(0);
+        }   
     }
 }

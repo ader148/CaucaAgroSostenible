@@ -18,6 +18,7 @@
         <table class="table" style="text-align: center;">
             <thead>
                 <tr>
+                    <th></th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">precio</th>
@@ -27,18 +28,19 @@
             <tbody>
                 @foreach ($shopping_cart->shopping_cart_details as $shopping_cart_detail )
                 <tr>
+                    <th><img src="{{ url($shopping_cart_detail->product->imagen) }}" alt="" style="height: 100px; width: auto;"></th>
                     <th>{{ $shopping_cart_detail->product->nombre }}</th>
                     <td>{{ $shopping_cart_detail->product->cantidad }}</td>
                     <td>{{ $shopping_cart_detail->product->precio }}</td>
                     <td>
-                        <a onclick="deleteProductoCarrito(<?php  echo $shopping_cart_detail->product->id  ?>);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
+                        <a onclick="deleteProductoCarrito(<?php echo $shopping_cart_detail->product->id  ?>);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>
                     </td>
 
-                    
+
                 </tr>
                 @endforeach
-                
-                
+
+
                 <!-- fila de total -->
                 <tr>
                     <td>
@@ -61,10 +63,47 @@
         </div>
 
     </div>
-
-
-
-
 </section>
+
+<style>
+    th{
+        vertical-align: middle !important;
+    }
+
+    td{
+        vertical-align: middle !important;
+    }
+</style>
+
+<script>
+    function deleteProductoCarrito(id_shopping_detail) {
+
+        //var idEvent = $('#idEvent').val();
+
+        //console.log("este es el id de inverisonista"+ idinver);
+
+        $.ajax({
+            type: 'POST',
+            url: '<?php echo (route('/EliminarProductoCarrito')); ?>',
+            data: {
+                "_token": "{{ csrf_token() }}",
+                "id": id_shopping_detail,
+            },
+            //data:'_token = <?php echo csrf_token() ?>',
+            success: function(data) {
+                //console.log(data);
+                if (data == 1) {
+                    //agregar mensaje
+                    location.reload(true);
+                } else {
+                    //agregar mensaje
+                    location.reload(true);
+                }
+                //$("#msg").html(data.msg);
+            }
+        });
+
+    }
+</script>
 
 @endsection
