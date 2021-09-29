@@ -54,16 +54,49 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{$producto->nombre }}</h5>
                                 <h6>$ {{ $producto->precio }}</h6>
+                                <br>
                                 <a href="#" class="producto"> <i class="" onclick="addProductoCarrito(<?php echo $producto->id ?>)"> Añadir al carrito</i></a>
+                                <a onclick="launchModal('<?php echo ($producto->nombre); ?>','<?php echo ($producto->cantidad); ?>','<?php echo ($producto->precio); ?>',<?php echo ($producto->id); ?>);" type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#myModal"><i>Más Detalles</i></a>
                             </div>
                         </div>
                     </div>
                     <!-- fin del producto -->
                 </div>
                 @endforeach
+                </div>
+                </div>
             </div>
-
-
+        </div>
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Descripción del Producto</h5>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body text-center mt-4">
+                        <h4 id="nameProd"></h4>
+                        <h4> x </h4>
+                        <h4 id="cantidadProd"></h4>
+                        <br>
+                        <h4>$ </h4>
+                        <h4 id="precioProd"></h4>
+                        <input id="idProd" type="hidden" value="">
+                            
+                        
+                        <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur distinctio praesentium sit dolores, eligendi dolorem fugit! Asperiores eveniet reprehenderit distinctio aliquam, quas ullam, eligendi, et eum in iste accusantium! Ipsum?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius porro cum quaerat unde vero, nulla voluptate autem? Ipsum sunt animi saepe officiis. Necessitatibus tempore harum iusto. Laboriosam dignissimos aspernatur praesentium!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis vel inventore voluptas praesentium, error quisquam placeat nihil explicabo quibusdam dolorem enim dignissimos laudantium velit sit eius possimus voluptate harum nulla!.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -72,7 +105,6 @@
 
 <script>
     function addProductoCarrito(id_producto) {
-
 
         $.ajax({
             type: 'POST',
@@ -86,8 +118,17 @@
                 toastr["success"]("Producto agregado al carrito");
             }
         });
-
     }
+
+    function launchModal(nameprod,cantidadProd,precioprod,idprod){
+        //seteamos el nombre del usuario a eliminar
+        $('#nameProd').text(nameprod);
+        $('#cantidadProd').text(cantidadProd);
+        $('#precioProd').text(precioprod);
+        $('#idProd').val(idprod);
+        $('#myModal').modal('show');
+    }
+
 </script>
 
 @endsection

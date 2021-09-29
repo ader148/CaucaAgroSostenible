@@ -96,3 +96,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.modal {
+    overflow: hidden;
+    font-family: 'DM Sans', sans-serif;
+}
+.modal-header {
+  font-family: 'DM Sans', sans-serif;
+  height:30px;
+  padding: 20px;
+  background-color:#32620E;
+}
+.modal-title {
+  margin-top:-10px;
+  color: #fff;
+}
+
+.modal-body {
+  color:#888;
+  padding: 5px 35px 20px;
+}
+
+.modal-body h4 {
+  text-align: center;
+  display: inline;
+}
+.modal-body p {
+  padding-top:5px;
+  font-size: 1.1em;
+}
+
+
+
