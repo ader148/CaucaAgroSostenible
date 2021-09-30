@@ -36,6 +36,11 @@ Route::post('/registrousuario', [RegisterController::class, 'newuser'])->name('/
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('/homePrincipal', function () {
+        return view('home');
+    });
+
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/canastaAgricola', [ProductosController::class, 'index'])->name('/canastaAgricola');

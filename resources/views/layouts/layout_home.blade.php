@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -30,7 +33,8 @@
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
     <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
     <link href="{{ asset('css/inversionistas.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/homePrincipal.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/agroOferta.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -49,8 +53,25 @@
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
+
+    <script>
+    const formulario = document.querySelector('#searchTerm');
+    const boton  = document.querySelector('#buttonSearch');
+
+    const filtrar = ()=>{
+        //console.log(formulario.value);
+        const texto = formulario.value.toLowerCase();
+        for(let producto of producto){
+            let nombre = producto.nombre.toLowerCase();
+            if(nombre.indexOf(texto) !== -1){
+
+            }
+        }
+    }
+
+    boton.addEventListener('click', filtrar);
+</script>
     
 </body>
 @include('footer')
-
 </html>
