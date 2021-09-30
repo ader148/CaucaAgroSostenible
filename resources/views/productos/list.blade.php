@@ -23,7 +23,8 @@
                     <th></th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Cantidad</th>
-                    <th scope="col">precio</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descripción</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -33,7 +34,8 @@
                     <th><img src="{{ url($producto->imagen) }}" alt="" style="height: 100px; width: auto;"></th>
                     <th>{{ $producto->nombre }}</th>
                     <td>{{ $producto->cantidad }}</td>
-                    <td>{{ $producto->precio }}</td>                    
+                    <td>{{ $producto->precio }}</td>  
+                    <td style="width: 24%; text-align: left;">{{ $producto->descripcion }}</td>                    
                     <td>
                         <a href="{{ route('/admin/EditarProducto') }}/{{ $producto->id }}" style="cursor: pointer; background-color: antiquewhite; border-radius: 10px; padding: 10px; margin-right: 5%;">Editar</a>
                          <a onclick="launchModal('<?php echo ($producto->nombre); ?>',<?php echo ($producto->id); ?>);" style="cursor: pointer; background-color: lightcoral;border-radius: 10px; padding: 10px; margin-right: 5%;">Eliminar</a>

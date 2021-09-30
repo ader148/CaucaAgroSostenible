@@ -3,26 +3,10 @@
   color: #3B4848;
 }
 
-.card{
-  box-shadow:2px 2px 20px rgba(0,0,0,0.3);
-  border:none;
-  margin-bottom:30px;
-}
-
 .card:hover{
   transform: scale(1.05);
   transition: all 1s ease;
   z-index: 999;
-}
-
-.card-01 .badge-box{
-  position:absolute; 
-  top:-20px; 
-  left:50%; 
-  width:100px; 
-  height:100px;
-  margin-left:-50px; 
-  text-align:center;
 }
 
 .profile-box{
@@ -58,6 +42,7 @@
 .social-box a{
   margin: 0 5px;
 }
+
 
 
 

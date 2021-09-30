@@ -33,7 +33,7 @@
                 <tr>
                     <th><img src="{{ url($inversionista->imagen) }}" alt="" style="height: 100px; width: auto;"></th>
                     <th>{{ $inversionista->nombre }}</th>
-                    <td>{{ $inversionista->descripcion }}</td>
+                    <td style="width: 21%; text-align: left;">{{ $inversionista->descripcion }}</td>
                     <td>{{ $inversionista->correo }}</td>
                     <td>{{ $inversionista->telefono }}</td>
                     <td> 
