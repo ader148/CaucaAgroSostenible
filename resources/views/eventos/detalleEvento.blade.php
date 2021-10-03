@@ -18,7 +18,7 @@
 
     <div class="row" style="padding-left: 10%; padding-right: 10%; text-align: center;">
         <div class="col-sm-6">
-            <img src="http://localhost/caucaAgroSostenible/public/storage/inversionistas/3X3UoTMWsGbNyECQFp0Tu9GaBUDD552C4bbcDNcK.jpg" alt="" style="max-width: 200px;margin-bottom: 12%;">
+            <img src="{{ URL::asset($evento->imagen) }}" alt="" style="max-width: 400px;margin-bottom: 12%;">
 
             <!-- inicio mapa -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

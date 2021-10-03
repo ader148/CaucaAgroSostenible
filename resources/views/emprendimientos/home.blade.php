@@ -9,7 +9,7 @@
     </div>
     
     <section name="emprendimientos" id="galeria" class="container-fluid">
-        <div class="row">
+        <div class="row" style="padding-right: 4%; padding-left: 4%;">
         @foreach ($emprendimientos as $emprendimiento)   
             <!-- inicio emprendimiento -->
             <div class="col-lg-4 col-md-6 col-sm-1">
@@ -19,10 +19,10 @@
                 <div class="text-justify pt-2">
                     <p>{{ $emprendimiento->descripcion }}</p>
                 </div>
-                <img src="./img/img1.jpg" alt="emprendimiento">
+                <img src="{{ URL::asset($emprendimiento->imagen) }}" alt="emprendimiento">
                 
                 <div class="container-redes text-left pt-2">
-                    <a href="https://www.instagram.com/" class="instagram"> <i class="fa fa-instagram"> @instagram</i></a>
+                    <a href="https://www.instagram.com/{{ $emprendimiento->redes }}" class="instagram"> <i class="fa fa-instagram"> @<?php echo  $emprendimiento->redes; ?></i></a>
                 </div>
             </div>
             <!-- fin emprendimiento -->

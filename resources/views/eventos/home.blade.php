@@ -22,13 +22,13 @@
                     <div class="content-overlay">
                     </div>
                     <img class="content-image" src="{{ URL::asset($evento->imagen) }}" style="margin-bottom: 71px;">
-                    <div class="content-details fadeIn" style="text-align: left; top: 51%;">
+                    <div class="content-details fadeIn" style="text-align: left; top: 35%;">
                         <?php  
                                 
                                 $fecha_parcial = explode(" ",$evento->fecha);
                                 
                         ?>
-                        <h3 class="content-title" style="margin: 0px;">{{ $evento->nombre  }}</h3>
+                        <h3 class="content-title" style="margin: 0px;font-size: 14pt;">{{ $evento->nombre  }}</h3>
                         <h2 class="content-title" style="font-size: 14pt;font-weight: 200; margin: 0px;">{{  $fecha_parcial[0] }}</h2>                         
                     </div>
                     </a>                    
