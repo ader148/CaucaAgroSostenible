@@ -23,7 +23,7 @@
         <div class="col-md-4 col-sm-4 mb-5">
             <div class="card card-01">
                 <div class="profile-box">
-                    <img class="card-img-top rounded-circle" src="https://avatars0.githubusercontent.com/u/2575262?s=460&v=4" alt="Card image cap">
+                    <img class="card-img-top rounded-circle" src="{{ URL::asset($inversionista->imagen) }}" alt="Card image cap">
                     <br>
                     <h4 class="card-title mt-5">{{ $inversionista->nombre }}</h4>
                     <p class="card-text text-justify ml-3 mr-3">{{ $inversionista->descripcion }}</p>

@@ -85,6 +85,7 @@ class ProductosController extends Controller
         $nombre = $request->input('nombre_producto');
         $cantidad = $request->input('cantidad_producto');
         $precio = $request->input('precio_producto');
+        $descripcion = $request->input('descripcion_producto');
         $imagen = $url;
 
         try {
@@ -92,7 +93,8 @@ class ProductosController extends Controller
                 'nombre' => $nombre,
                 'imagen' => $imagen,
                 'cantidad' => $cantidad,
-                'precio' => $precio,                
+                'precio' => $precio, 
+                'descripcion' => $descripcion,               
             ]);
 
             Toastr::success('Producto creado correctamente', '', ["positionClass" => "toast-top-center"]);
