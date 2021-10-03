@@ -50,6 +50,15 @@ class EventosController extends Controller
         return view('eventos.editar')->with('evento',$evento);
     }
 
+    public function detail(){
+        $id_evento = Request('idEvento');
+
+        //dd($id_evento);
+        $evento = Evento::find($id_evento);
+
+        return view('eventos.detalleEvento')->with('evento',$evento);
+    }
+
     protected function edit(Request $request){
 
         $id_evento = $request->input('id_evento');

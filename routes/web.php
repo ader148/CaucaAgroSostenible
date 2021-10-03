@@ -23,11 +23,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('auth.login');
-});
+});*/
 
-Auth::routes(['register'=>false,'reset' => false]);
+Auth::routes(['register' => false, 'reset' => false]);
 
 Route::get('/registro', [RegisterController::class, 'index'])->name('/registro');
 
@@ -35,29 +35,40 @@ Route::post('/registrousuario', [RegisterController::class, 'newuser'])->name('/
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/homePrincipal', function () {
+    return view('home');
+});
 
-Route::group(['middleware' => 'auth'], function(){
+Route::get('/', function () {
+    return view('home');
+});
 
-    
-    Route::get('/homePrincipal', function () {
-        return view('home');
-    });
+//Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/canastaAgricola', [ProductosController::class, 'index'])->name('/canastaAgricola');
+Route::get('/emprendimientos', [EmprendimientosController::class, 'index'])->name('/emprendimientos');
+Route::get('/agroOferta', [OfertasController::class, 'index'])->name('/agroOferta');
+Route::get('/inversionistas', [InversionistasController::class, 'index'])->name('/inversionistas');
+Route::get('/eventos', [EventosController::class, 'index'])->name('/eventos');
 
-    Route::get('/canastaAgricola', [ProductosController::class, 'index'])->name('/canastaAgricola');
-    Route::get('/emprendimientos', [EmprendimientosController::class, 'index'])->name('/emprendimientos');
-    Route::get('/agroOferta', [OfertasController::class, 'index'])->name('/agroOferta');
-    Route::get('/inversionistas', [InversionistasController::class, 'index'])->name('/inversionistas');
-    Route::get('/eventos', [EventosController::class, 'index'])->name('/eventos');
 
-    //ruta para rgegar producto al carrito
-    Route::post('/agregarProductoCarrito', [ShoppingCartController::class, 'store'])->name('/agregarProductoCarrito');
+//ruta para rgegar producto al carrito
+Route::post('/agregarProductoCarrito', [ShoppingCartController::class, 'store'])->name('/agregarProductoCarrito');
 
-    Route::post('/EliminarProductoCarrito', [ShoppingCartController::class, 'delete'])->name('/EliminarProductoCarrito');
+Route::post('/EliminarProductoCarrito', [ShoppingCartController::class, 'delete'])->name('/EliminarProductoCarrito');
 
-    //carrito
-    Route::get('/carrito', [CartController::class, 'show'])->name('/carrito');
+
+Route::get('/detalleEvento/{idEvento?}', [EventosController::class, 'detail'])->name('/detalleEvento/{idEvento?}');
+
+
+//carrito
+Route::get('/carrito', [CartController::class, 'show'])->name('/carrito');
+
+
+Route::group(['middleware' => 'auth'], function () {
+
+    //Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
     Route::group(['middleware' => ['role:Admin']], function () {
         Route::get('/admin/home', [AdminController::class, 'index'])->name('/admin/home');
@@ -86,7 +97,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::post('/admin/EditarInversionista', [InversionistasController::class, 'edit'])->name('/admin/EditarInversionista');
 
         Route::post('/admin/EliminarInvesionista', [InversionistasController::class, 'delete'])->name('/admin/EliminarInvesionista');
-        
+
         //---- productos admin --------
         Route::get('/admin/listarProductos', [ProductosController::class, 'list'])->name('/admin/listarProductos');
         Route::post('/admin/crearProducto', [ProductosController::class, 'create'])->name('/admin/crearProducto');
@@ -111,7 +122,5 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('/admin/EditarOferta/{idOfer?}', [OfertasController::class, 'vistaEditar'])->name('/admin/EditarOferta/{idOfer?}');
         Route::post('/admin/EditarOferta', [OfertasController::class, 'edit'])->name('/admin/EditarOferta');
         Route::post('/admin/EliminarOferta', [OfertasController::class, 'delete'])->name('/admin/EliminarOferta');
-
-
     });
 });

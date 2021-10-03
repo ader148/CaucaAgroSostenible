@@ -10,6 +10,7 @@
         </strong>
     </div>
 
+    
 
     <div class="row" style="padding-left: 10%; padding-right: 10%;">
     @foreach ($eventos as $evento)
@@ -17,7 +18,7 @@
         <div class="col-lg-4">
             <div class="container" style="margin-top: 0px;">
                 <div class="content">
-                    <a href="#" target="_blank">  
+                    <a href="{{ url('/detalleEvento/') }}{{'/'}}{{ $evento->id }} " >  
                     <div class="content-overlay">
                     </div>
                     <img class="content-image" src="{{ URL::asset($evento->imagen) }}" style="margin-bottom: 71px;">
