@@ -18,6 +18,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -26,6 +32,12 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inversionistas.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/homePrincipal.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/agroOferta.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
@@ -78,6 +90,23 @@
         i.fs-4 {
             color: white !important;
         }
+
+        .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        a.navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        .navbar-dark .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        
     </style>
 
 
@@ -97,6 +126,23 @@
 @include('footer')
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="{{ asset('js/toastr.min.js') }}"></script>
+<script src="{{ asset('js/toastr.min.js') }}"></script>
+
+<style>
+    .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        a.navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        .navbar-dark .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+</style>
 
 </html>

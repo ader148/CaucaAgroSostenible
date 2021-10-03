@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Emprendimiento;
 use Illuminate\Http\Request;
 
 class EmprendimientosController extends Controller
 {
     public function index(){
-        return view('emprendimientos.home');
+
+        $emprendimientos = Emprendimiento::all();
+
+        return view('emprendimientos.home')->with('emprendimientos',$emprendimientos);
     }
 }

@@ -35,8 +35,10 @@ Route::post('/registrousuario', [RegisterController::class, 'newuser'])->name('/
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Route::group(['middleware' => 'auth'], function(){
 
+    
     Route::get('/homePrincipal', function () {
         return view('home');
     });

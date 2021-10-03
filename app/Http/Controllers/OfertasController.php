@@ -11,7 +11,10 @@ use Throwable;
 class OfertasController extends Controller
 {
     public function index(){
-        return view('ofertas.home');
+
+        $ofertas = Oferta::all();
+
+        return view('ofertas.home')->with('ofertas',$ofertas);
     }
 
     public function list(){

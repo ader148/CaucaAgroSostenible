@@ -26,90 +26,29 @@
     </div>
     <!--Fin Barra de busqueda -->
 
-    <div class="row ml-5 mr-5">
+    <div class="row ml-5 mr-5 mb-4">
+
+        @foreach ($ofertas as $oferta)
+        <!-- inicio oferta -->
         <div class="col-lg-4">
-            
-            <div class="container">
-                <div class="content">
+            <div class="container" style="margin-top: 0px;">
+                <div class="content" style="padding-bottom: 10%;">
                     <a href="#" target="_blank">  
                     <div class="content-overlay">
                     </div>
                     <img class="content-image" src="./img/potato.jpg">
                     <div class="content-details fadeIn">
-                        <h3 class="content-title">Hasta 20% OFF</h3>
-                        <h2 class="content-title">en Verduras</h2> 
+                        <h3 class="content-title">{{ $oferta->nombre }}</h3>
                         <p class="content-description">Ver oferta</p>
                     </div>
                     </a>
                 </div>
             </div>
+        </div>        
+        <!-- fin oferta -->
+        @endforeach
 
-        </div>
-        <div class="col-lg-4">
-            <div class="container">
-                <div class="content">
-                    <a href="#" target="_blank">  
-                    <div class="content-overlay">
-                    </div>
-                    <img class="content-image" src="./img/fruit.jpg">
-                    <div class="content-details fadeIn">
-                        <h3 class="content-title">Hasta 20% OFF</h3>
-                        <h2 class="content-title">en Verduras</h2> 
-                        <p class="content-description">Ver oferta</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="container">
-                <div class="content">
-                    <a href="#" target="_blank">  
-                    <div class="content-overlay">
-                    </div>
-                    <img class="content-image" src="./img/cereal2.jpg">
-                    <div class="content-details fadeIn">
-                        <h3 class="content-title">Hasta 20% OFF</h3>
-                        <h2 class="content-title">en Verduras</h2> 
-                        <p class="content-description">Ver oferta</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row ml-5 mr-5 mb-5">
-        <div class="col-lg-6">
-            <div class="container">
-                <div class="content">
-                    <a href="#" target="_blank">  
-                    <div class="content-overlay">
-                    </div>
-                    <img class="content-image" src="./img/oferta1.png">
-                    <div class="content-details fadeIn">
-                        <h3 class="content-title">Hasta 20% OFF</h3>
-                        <h2 class="content-title">en Verduras</h2> 
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="container">
-                <div class="content">
-                    <a href="#" target="_blank">  
-                    <div class="content-overlay">
-                    </div>
-                    <img class="content-image" src="./img/oferta2.png">
-                    <div class="content-details fadeIn">
-                        <h3 class="content-title">Hasta 20% OFF</h3>
-                        <h2 class="content-title">en Verduras</h2> 
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>    
 </section>
 <!--termina sección Agro oferta-->
 @endsection

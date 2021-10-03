@@ -15,7 +15,10 @@ class EventosController extends Controller
 {
     public function index()
     {
-        return view('eventos.home');
+        $eventos = Evento::all();
+
+
+        return view('eventos.home')->with('eventos',$eventos);
     }
 
     public function list(){

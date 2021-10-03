@@ -3,30 +3,44 @@
 
 @section('content')
 
-<section name="eventos" id="eventos" class="container-fluid">
-    <div class="container">
-        <div class="title text-center">
-            <strong><h1 class="mb-4">Eventos</h1></strong>
-        </div>
-        <div class="row mb-5 mr-2">
-            <div class="col-4">
-                <div class="row mt-4 mb-4">
-                    <img src="./img/imgEvento.jpg" alt="emprendimiento">
-                </div>
-                <div class="row">
-                    <img src="./img/img1.jpg" alt="emprendimiento">
-                    <h6>aqui va el mapa</h6>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="title text-justify">
-                    <strong><h2 class="ml-2 mb-2 mt-0">EXPOFINCA SE HARÁ EN EL CENTRO DECONVENCIONES PLAZA MAYOR MEDELLÍN</h2></strong>
-                    <h5 class="ml-2 text-left mb-4">DOMINGO, 3 1 DE OCTUBRE DEL 2021</h5>   
-                    <p class="ml-2 text-justify">Conectamos inversionistas con productores desde montos mínimos, con el fin de impulsar proyectos agrícolas rentables. Creemos en el campo colombiano, por eso trabajamos para apoyar a pequeños y medianos agricultores en sus proyectos productivos con un acompañamiento continuo desde la estructuración y establecimiento, hasta la justa comercialización de su producción. Contamos con producto de exportación en diferentes regiones del país.</p> 
-            </div>
-            </div>
-        </div>
+<section name="canastaAgricola" id="canasta" class="container-fluid" style="margin-bottom: 7%;">
+    <div class="title text-center">
+        <strong>
+            <h1>Eventos</h1>
+        </strong>
     </div>
+
+
+    <div class="row" style="padding-left: 10%; padding-right: 10%;">
+    @foreach ($eventos as $evento)
+        <!-- inicio evento -->
+        <div class="col-lg-4">
+            <div class="container" style="margin-top: 0px;">
+                <div class="content">
+                    <a href="#" target="_blank">  
+                    <div class="content-overlay">
+                    </div>
+                    <img class="content-image" src="{{ URL::asset($evento->imagen) }}" style="margin-bottom: 71px;">
+                    <div class="content-details fadeIn" style="text-align: left; top: 51%;">
+                        <?php  
+                                
+                                $fecha_parcial = explode(" ",$evento->fecha);
+                                
+                        ?>
+                        <h3 class="content-title" style="margin: 0px;">{{ $evento->nombre  }}</h3>
+                        <h2 class="content-title" style="font-size: 14pt;font-weight: 200; margin: 0px;">{{  $fecha_parcial[0] }}</h2>                         
+                    </div>
+                    </a>                    
+            </div>
+            <p style="color: black; margin-top: -12%; margin-left: 0px;     text-align: justify;">{{ $evento->descripcion }}</p>         
+            </div>
+        </div>
+        <!-- fin evento -->
+    @endforeach
+        
+
+    </div>
+    
 </section>
 
 @endsection

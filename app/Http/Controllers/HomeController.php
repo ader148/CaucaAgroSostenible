@@ -24,10 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //var_dump("hola desde aca");
-        //die();
-        $productos = Producto::all();
+        
+        //$productos = Producto::all();
+        //return view('productos.home')->with('productos',$productos);
 
-        return view('productos.home')->with('productos',$productos);
+        return view('home');
     }
 }

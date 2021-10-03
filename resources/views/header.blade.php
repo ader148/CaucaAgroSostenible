@@ -1,6 +1,6 @@
   <nav class="navbar sticky-top navbar-expand-sm navbar-dark gradient-custom">
     <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ URL::to('/') }}">
       <img src="{{ asset('img/logo2.png') }}" 
         alt="" 
         width="30" 
@@ -88,3 +88,20 @@
       </div>
     </div>
   </nav>
+
+  <style>
+    .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        a.navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+
+        .navbar-dark .navbar-brand{
+            font-size: 11pt !important;
+            margin-right: 0px !important;
+        }
+</style>
