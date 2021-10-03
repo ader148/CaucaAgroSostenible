@@ -45,6 +45,8 @@ Route::get('/', function () {
 
 //Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::get('/canastaAgricola', [ProductosController::class, 'index'])->name('/canastaAgricola');
 Route::get('/emprendimientos', [EmprendimientosController::class, 'index'])->name('/emprendimientos');
 Route::get('/agroOferta', [OfertasController::class, 'index'])->name('/agroOferta');
@@ -122,5 +124,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/admin/EditarOferta/{idOfer?}', [OfertasController::class, 'vistaEditar'])->name('/admin/EditarOferta/{idOfer?}');
         Route::post('/admin/EditarOferta', [OfertasController::class, 'edit'])->name('/admin/EditarOferta');
         Route::post('/admin/EliminarOferta', [OfertasController::class, 'delete'])->name('/admin/EliminarOferta');
+
+
+        //emprendimientos
+        Route::get('/admin/listaEmprendimientos', [EmprendimientosController::class, 'list'])->name('/admin/listaEmprendimientos');
+        Route::post('/admin/CrearEmprendimiento', [EmprendimientosController::class, 'create'])->name('/admin/CrearEmprendimiento');
+        Route::get('/admin/CrearEmprendimiento', function () {
+            return view('emprendimientos.crearNuevo');
+        })->name('/admin/CrearEmprendimiento');
+
+        Route::get('/admin/EditarEmprendimiento/{idEmpr?}', [EmprendimientosController::class, 'vistaEditar'])->name('/admin/EditarEmprendimiento/{idEmpr?}');
+        Route::post('/admin/EditarEmprendimiento', [EmprendimientosController::class, 'edit'])->name('/admin/EditarEmprendimiento');
+
+        Route::post('/admin/EliminarEmprendimiento', [EmprendimientosController::class, 'delete'])->name('/admin/EliminarEmprendimiento');
+
     });
 });

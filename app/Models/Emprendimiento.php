@@ -9,4 +9,11 @@ class Emprendimiento extends Model
 {
     use HasFactory;
     protected $table = "emprendimiento";
+
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'imagen',
+        'redes',        
+    ];
 }

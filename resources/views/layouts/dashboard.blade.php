@@ -33,7 +33,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/body.css') }}" rel="stylesheet">
     <link href="{{ asset('css/canastaAgricola.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/homePrincipal.css') }}" rel="stylesheet">
+    <!--<link href="{{ asset('css/homePrincipal.css') }}" rel="stylesheet">-->
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 
 
@@ -68,6 +68,10 @@
                         <li>
                             <a href="{{ route('/admin/listarOfertas') }}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Ofertas</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('/admin/listaEmprendimientos') }}" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Emprendimientos</span> </a>
                         </li>
                     </ul>
                     <hr>
