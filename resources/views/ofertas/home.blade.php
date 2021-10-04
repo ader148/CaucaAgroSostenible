@@ -32,11 +32,11 @@
         <!-- inicio oferta -->
         <div class="col-lg-4">
             <div class="container" style="margin-top: 0px;">
-                <div class="content" style="padding-bottom: 10%;">
+                <div class="content" style="padding-bottom: 12%;">
                     <a href="#" target="_blank">  
                     <div class="content-overlay">
                     </div>
-                    <img class="content-image" src="./img/potato.jpg">
+                    <img class="content-image" src="{{ URL::asset($oferta->imagen) }}">
                     <div class="content-details fadeIn">
                         <h3 class="content-title">{{ $oferta->nombre }}</h3>
                         <p class="content-description">Ver oferta</p>
