@@ -7,6 +7,7 @@
 <div class="row justify-content-center" style="min-height: 100vh; width: 100%;">
 
     <div class="col-sm-6 justify-content-center" style="justify-content: center !important;align-items: center; display: flex; background-color: white;">
+    
         <div style="min-height: 100px; min-width: 100px;">
             <h1 style="color:#316317; text-align: center;font-weight: bold;">INICIO DE SESIÓN</h1>
             <div class="card" style="border: none;padding-left: 15%; padding-right: 15%;">
